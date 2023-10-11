@@ -1,22 +1,64 @@
-\documentclass[english]{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage[useregional]{datetime2}
-\usepackage{babel}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{subfiles} 
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{cleveref}
 
-\title{NASA Communications}
-\author{Ali Malik}
-\date{\today}
 
+\DeclareSIUnit \bit {b}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
+
+\title{An Overview of NASA's CubeSat Laser Infrared CrosslinK Mission \\}
+
+\author{\IEEEauthorblockN{Ali Malik}
+\IEEEauthorblockA{\textit{Volgenau School of Engineering} \\
+\textit{George Mason University}\\
+Fairfax, Virginia, USA \\
+amalik18@gmu.edu}
+}
 
 \maketitle
 
-\section*{Topic Details}
+\begin{abstract}
+    \subfile{content/abstract.tex}
+\end{abstract}
 
-NASA's recent work in optical communications has been tremendous. NASA's first step was completing the Laser Communications Relay Demonstration (LCRD) which was launched in December of 2021. Launched as the payload for the United States' Department of Defense (DoD) STPSat-6 spacecraft atop the United Launch Alliance Atlas V 551 rocket. The goal of the LCRD was to showcase the capabilities of optical communications as a means to replace the current methodology, radio frequency (RF) communications \cite{lcrd}. As space missions become more and more complex and collect more data, the need for enhanced communications capabilities becomes very important. One of the answers to that question is optical communications, which could theoretically provide a 10x-100x improvement from the current RF communications. This demonstration builds atop the Lunar Laser Communications Demonstration (LLCD) held in 2013-2014, which showed it was possible to transmit 622 Mbps of data using a space terminal with less SWaP (size, weight, and power) than a comparable RF terminal \cite{llcd}. 
+\begin{IEEEkeywords}
+cubesats, optical commmunication, smallsats, nasa
+\end{IEEEkeywords}
+
+\section{Introduction}
+\subfile{content/intro.tex}
+
+\section{Mission Overview}
+\subfile{content/overview.tex}
+
+\section{CLICK-A}
+\subfile{content/overview_click_a.tex}
+
+\section{CLICK-B/C}
+\subfile{content/overview_click_bc.tex}
 
 
-\bibliographystyle{plain}
+
+
+
 \bibliography{ref}
+\bibliographystyle{IEEEtran}
 
 \end{document}
+
+
